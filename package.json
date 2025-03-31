@@ -1,0 +1,103 @@
+{
+  "name": "@benhigham/eslint-config",
+  "version": "0.0.0",
+  "description": "My personal ESLint configurations.",
+  "license": "MIT",
+  "homepage": "https://github.com/benhigham/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/benhigham/eslint-config/issues/new"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benhigham/eslint-config.git"
+  },
+  "funding": "https://github.com/sponsors/benhigham",
+  "author": {
+    "name": "Ben Higham",
+    "url": "https://benhigham.com"
+  },
+  "type": "module",
+  "module": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./browser": "./src/browser.js",
+    "./next": "./src/next.js",
+    "./react": "./src/react.js",
+    "./typescript": "./src/typescript.js"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": "^18.20.0 || ^20.10.0 || >=21.0.0"
+  },
+  "packageManager": "pnpm@10.7.0",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "changeset": "changeset",
+    "changeset:status": "changeset status",
+    "version": "changeset version",
+    "release": "changeset publish"
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "check",
+    "checker",
+    "code",
+    "config",
+    "enforce",
+    "eslint",
+    "eslintconfig",
+    "hint",
+    "jscs",
+    "jshint",
+    "jslint",
+    "lint",
+    "linter",
+    "quality",
+    "standard",
+    "strict",
+    "style",
+    "styleguide",
+    "tslint",
+    "typescript",
+    "validate",
+    "verify"
+  ],
+  "dependencies": {
+    "@next/eslint-plugin-next": "^15.2.4",
+    "@vitest/eslint-plugin": "^1.1.38",
+    "confusing-browser-globals": "^1.0.11",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-config-xo": "^0.46.0",
+    "eslint-config-xo-react": "^0.28.0",
+    "eslint-config-xo-typescript": "^7.0.0",
+    "eslint-import-resolver-typescript": "^4.3.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-n": "^17.17.0",
+    "eslint-plugin-no-use-extend-native": "^0.7.2",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-testing-library": "^7.1.1",
+    "eslint-plugin-unicorn": "^58.0.0",
+    "globals": "^16.0.0"
+  },
+  "devDependencies": {
+    "@benhigham/commitlint-config": "^0.1.0",
+    "@benhigham/prettier-config": "^0.1.0",
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.28.1",
+    "@commitlint/cli": "^19.8.0",
+    "eslint": "^9.23.0",
+    "eslint-find-rules": "^5.0.0",
+    "lefthook": "^1.11.5",
+    "prettier": "^3.5.3"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0"
+  }
+}
