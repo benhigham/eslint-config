@@ -11,7 +11,7 @@ import reactConfig from './react.js';
  * */
 const config = [
   {
-    ignores: ['.next', '.vercel']
+    ignores: ['.next', '.vercel'],
   },
   ...reactConfig,
   {

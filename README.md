@@ -39,9 +39,7 @@ Add the configuration to your ESLint config file:
 import benhighamEslintConfig from '@benhigham/eslint-config';
 
 /** @type {import('eslint').Linter.Config[]} */
-const config = [
-  ...benhighamEslintConfig,
-];
+const config = [...benhighamEslintConfig];
 
 export default config;
 ```
@@ -53,9 +51,7 @@ export default config;
 import benhighamEslintConfigTypescript from '@benhigham/eslint-config/typescript';
 
 /** @type {import('eslint').Linter.Config[]} */
-const config = [
-  ...benhighamEslintConfigTypescript,
-];
+const config = [...benhighamEslintConfigTypescript];
 
 export default config;
 ```
@@ -67,9 +63,7 @@ export default config;
 import benhighamEslintConfigBrowser from '@benhigham/eslint-config/browser';
 
 /** @type {import('eslint').Linter.Config[]} */
-const config = [
-  ...benhighamEslintConfigBrowser,
-];
+const config = [...benhighamEslintConfigBrowser];
 
 export default config;
 ```
@@ -81,9 +75,7 @@ export default config;
 import benhighamEslintConfigReact from '@benhigham/eslint-config/react';
 
 /** @type {import('eslint').Linter.Config[]} */
-const config = [
-  ...benhighamEslintConfigReact,
-];
+const config = [...benhighamEslintConfigReact];
 
 export default config;
 ```
@@ -95,9 +87,7 @@ export default config;
 import benhighamEslintConfigNext from '@benhigham/eslint-config/next';
 
 /** @type {import('eslint').Linter.Config[]} */
-const config = [
-  ...benhighamEslintConfigNext,
-];
+const config = [...benhighamEslintConfigNext];
 
 export default config;
 ```
