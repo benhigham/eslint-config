@@ -1,3 +1,4 @@
+import compatConfig from './plugins/compat.js';
 import eslintCommentsConfig from './plugins/eslint-comments.js';
 import nConfig from './plugins/n.js';
 import noUseExtendNativeConfig from './plugins/no-use-extend-native.js';
@@ -31,6 +32,7 @@ const config = [
   noUseExtendNativeConfig,
   promiseConfig,
   unicornConfig,
+  compatConfig,
   vitestConfig,
 ];
 
