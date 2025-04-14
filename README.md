@@ -103,6 +103,7 @@ This package includes rules and configurations from the following plugins:
 - **eslint-plugin-jsx-a11y**: Accessibility rules for JSX
 - **eslint-plugin-no-use-extend-native**: Prevents extending built-in native objects
 - **eslint-plugin-n**: Rules for Node.js development (formerly `eslint-plugin-node`)
+- **eslint-plugin-compat**: Rules for ensuring compatibility with [Browserslist](https://github.com/browserslist/browserslist) configuration
 - **@next/eslint-plugin-next**: Rules specific to Next.js development
 - **@vitest/eslint-plugin**: Rules for Vitest testing framework
 - **eslint-plugin-testing-library**: Rules for Testing Library (DOM and React)
