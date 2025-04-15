@@ -2,7 +2,7 @@
 pre-commit:
   commands:
     lint:
-      glob: '{src,scripts}/**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts,html,vue}'
+      glob: '**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts,html,vue}'
       run: pnpm exec eslint --fix {staged_files}
       stage_fixed: true
     format:
