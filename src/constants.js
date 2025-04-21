@@ -5,6 +5,6 @@ export const ALL_EXTENSIONS = [...JS_EXTENSIONS, ...TS_EXTENSIONS];
 export const JS_FILES = ['**/*.{js,jsx,mjs,cjs}'];
 export const CONFIG_FILES = ['*.config.?(c|m)[jt]s'];
 export const TEST_FILES = [
-  '**/__tests__/**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}',
-  '**/*.{test,spec}.{js,jsx,mjs,cjs,ts,tsx,mts,cts}',
+  '**/__tests__/**/*.?(c|m)[jt]s?(x)',
+  '**/*.{test,spec}.?(c|m)[jt]s?(x)',
 ];
