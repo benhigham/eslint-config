@@ -1,9 +1,12 @@
 import eslintPluginPromise from 'eslint-plugin-promise';
 
+import { DEFAULT_FILES } from '../constants.js';
+
 /** @import { Linter } from 'eslint' */
 
 /** @type {Linter.Config} */
 const config = {
+  files: [...DEFAULT_FILES],
   plugins: {
     promise: eslintPluginPromise,
   },

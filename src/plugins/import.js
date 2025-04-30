@@ -1,8 +1,10 @@
 import eslintPluginImport from 'eslint-plugin-import';
 
 import {
-  ALL_EXTENSIONS,
   CONFIG_FILES,
+  DEFAULT_EXTENSIONS,
+  DEFAULT_FILES,
+  JS_FILES,
   TEST_FILES,
   TS_EXTENSIONS,
 } from '../constants.js';
@@ -11,6 +13,7 @@ import {
 
 /** @type {Linter.Config} */
 export const jsConfig = {
+  files: [...JS_FILES],
   plugins: {
     import: eslintPluginImport,
   },
@@ -131,16 +134,17 @@ export const jsConfig = {
 /** @type {Linter.Config} */
 export const tsConfig = {
   ...jsConfig,
+  files: [...DEFAULT_FILES],
   settings: {
     ...jsConfig.settings,
-    'import/extensions': ALL_EXTENSIONS,
+    'import/extensions': [...DEFAULT_EXTENSIONS],
     'import/external-module-folders': ['node_modules', 'node_modules/@types'],
     'import/parsers': {
-      '@typescript-eslint/parser': TS_EXTENSIONS,
+      '@typescript-eslint/parser': [...TS_EXTENSIONS],
     },
     'import/resolver': {
       node: {
-        extensions: ALL_EXTENSIONS,
+        extensions: [...DEFAULT_EXTENSIONS],
       },
       typescript: {
         alwaysTryTypes: true,
