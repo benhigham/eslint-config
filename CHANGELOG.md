@@ -1,5 +1,15 @@
 # @benhigham/eslint-config
 
+## 0.3.0
+
+### Minor Changes
+
+- [`87c6eb6`](https://github.com/benhigham/eslint-config/commit/87c6eb693958c9e93ba0a0407dcdc9db1e365cf1) Thanks [@benhigham](https://github.com/benhigham)! - Update dependencies
+
+### Patch Changes
+
+- [`87c6eb6`](https://github.com/benhigham/eslint-config/commit/87c6eb693958c9e93ba0a0407dcdc9db1e365cf1) Thanks [@benhigham](https://github.com/benhigham)! - Add files definitions to JS/TS-specific plugin configurations
+
 ## 0.2.0
 
 ### Minor Changes
