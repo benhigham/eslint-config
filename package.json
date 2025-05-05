@@ -69,7 +69,7 @@
   ],
   "dependencies": {
     "@next/eslint-plugin-next": "^15.3.1",
-    "@vitest/eslint-plugin": "^1.1.43",
+    "@vitest/eslint-plugin": "^1.1.44",
     "confusing-browser-globals": "^1.0.11",
     "eslint-config-prettier": "^10.1.2",
     "eslint-config-xo": "^0.47.0",
@@ -91,14 +91,14 @@
     "@benhigham/commitlint-config": "^0.1.2",
     "@benhigham/prettier-config": "^0.1.0",
     "@changesets/changelog-github": "^0.5.1",
-    "@changesets/cli": "^2.29.2",
+    "@changesets/cli": "^2.29.3",
     "@commitlint/cli": "^19.8.0",
-    "eslint": "^9.25.1",
+    "eslint": "^9.26.0",
     "eslint-find-rules": "^5.0.0",
     "lefthook": "^1.11.12",
     "prettier": "^3.5.3"
   },
   "peerDependencies": {
-    "eslint": ">=9.25.0"
+    "eslint": ">=9.26.0"
   }
 }
