@@ -1,5 +1,11 @@
 # @benhigham/eslint-config
 
+## 0.3.1
+
+### Patch Changes
+
+- [`4eb878a`](https://github.com/benhigham/eslint-config/commit/4eb878abdc77c6c16587fefc80fed349e3fe442b) Thanks [@benhigham](https://github.com/benhigham)! - Bump dependencies
+
 ## 0.3.0
 
 ### Minor Changes
