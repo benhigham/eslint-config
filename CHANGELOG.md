@@ -1,5 +1,11 @@
 # @benhigham/eslint-config
 
+## 1.0.0
+
+### Major Changes
+
+- [`5b599f6`](https://github.com/benhigham/eslint-config/commit/5b599f6f0472b9904180e0c6e89983d487a1c087) Thanks [@benhigham](https://github.com/benhigham)! - Add several new plugins. Replace `eslint-plugin-eslint-comments` with `@eslint-community/eslint-plugin-eslint-comments`, replace `eslint-plugin-import` with `eslint-plugin-import-x`. Add new exports for GraphQL, Playwright, and TailwindCSS plugin configurations.
+
 ## 0.3.1
 
 ### Patch Changes
