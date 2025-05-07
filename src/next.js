@@ -6,9 +6,8 @@ import reactConfig from './react.js';
 
 /**
  * A shared ESLint configuration for libraries that use Next.js.
- *
  * @type {Linter.Config[]}
- * */
+ */
 const config = [
   {
     ignores: ['.next', '.vercel'],

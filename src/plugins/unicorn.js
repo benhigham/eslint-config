@@ -1,3 +1,4 @@
+// eslint-disable-next-line depend/ban-dependencies
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
 import { DEFAULT_FILES } from '../constants.js';

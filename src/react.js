@@ -11,12 +11,11 @@ import typescriptConfig from './typescript.js';
 
 /**
  * A shared ESLint configuration for libraries that use React.
- *
  * @type {Linter.Config[]}
- * */
+ */
 const config = [
   ...typescriptConfig,
-  browserConfig,
+  ...browserConfig,
   jsxA11yConfig,
   testingLibraryConfig,
   ...eslintConfigXoReact,

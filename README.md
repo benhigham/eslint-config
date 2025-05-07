@@ -8,12 +8,18 @@ A shareable ESLint configuration package with opinionated rules for JavaScript a
 
 ## Features
 
-- **Base Configuration**: Core JavaScript linting with sensible defaults
-- **TypeScript Support**: Built-in TypeScript linting using [`eslint-config-xo-typescript`](https://github.com/xojs/eslint-config-xo-typescript)
-- **Environment Support**: Browser and Node.js specific configurations
-- **Framework Support**: Dedicated configurations for React and Next.js
-- **Testing**: Built-in support for Vitest and Testing Library
-- **Prettier Integration**: Compatible with Prettier for consistent code formatting
+- **Comprehensive JavaScript & TypeScript Linting**: Strong base rules for both JavaScript and TypeScript projects
+- **Node.js & Browser Support**: Environment-specific rules for Node.js and browser projects
+- **React & Next.js Support**: Dedicated configurations for React and Next.js applications
+- **Accessibility**: Linting for accessibility best practices in JSX
+- **Promise & Async Code**: Enforces best practices for promises and async code
+- **Security**: Prevents use of secrets, unsanitized DOM manipulation, and unsafe patterns
+- **Code Quality & Consistency**: Includes rules for code quality, maintainability, and modern best practices
+- **Testing Support**: Built-in support for Vitest, Testing Library, and Playwright
+- **GraphQL Linting**: Schema and operation linting for GraphQL projects
+- **Tailwind CSS Integration**: Linting for Tailwind CSS class usage
+- **Prettier Compatibility**: Disables conflicting rules for seamless Prettier integration
+- **Documentation Linting**: Enforces standards for JSDoc and ESLint directive comments
 
 ## Installation
 
@@ -92,62 +98,85 @@ const config = [...benhighamEslintConfigNext];
 export default config;
 ```
 
+### GraphQL Plugin
+
+For schema configuration (server):
+
+```js
+// eslint.config.js
+import { schemaConfig } from '@benhigham/eslint-config/plugins/graphql';
+
+/** @type {import('eslint').Linter.Config[]} */
+const config = [...schemaConfig];
+
+export default config;
+```
+
+For operations configuration (client):
+
+```js
+// eslint.config.js
+import { operationsConfig } from '@benhigham/eslint-config/plugins/graphql';
+
+/** @type {import('eslint').Linter.Config[]} */
+const config = [...operationsConfig];
+
+export default config;
+```
+
+### Playwright Plugin
+
+```js
+// eslint.config.js
+import playwrightConfig from '@benhigham/eslint-config/plugins/playwright';
+
+/** @type {import('eslint').Linter.Config[]} */
+const config = [
+  {
+    files: ['**/tests/**/*.?(c|m)[jt]s', '**/*.{test,spec}.?(c|m)[jt]s'],
+    ...playwrightConfig,
+  },
+];
+
+export default config;
+```
+
+### Tailwind CSS Plugin
+
+```js
+// eslint.config.js
+import tailwindcssConfig from '@benhigham/eslint-config/plugins/tailwindcss';
+
+/** @type {import('eslint').Linter.Config[]} */
+const config = [tailwindcssConfig];
+
+export default config;
+```
+
 ## Included Plugins
 
 This package includes rules and configurations from the following plugins:
 
-- **eslint-plugin-import**: Manages import/export syntax and prevents issues
-- **eslint-plugin-unicorn**: Various awesome ESLint rules
-- **eslint-plugin-promise**: Enforces best practices for JavaScript promises
-- **eslint-plugin-eslint-comments**: Enforces best practices for ESLint directive comments
-- **eslint-plugin-jsx-a11y**: Accessibility rules for JSX
+- **eslint-plugin-unicorn**: Various powerful ESLint rules
+- **eslint-plugin-import-x**: Enhanced import/export linting
+- **eslint-plugin-promise**: Best practices for JavaScript promises
+- **eslint-plugin-n**: Node.js-specific rules
+- **eslint-plugin-compat**: Ensures browser compatibility via Browserslist
 - **eslint-plugin-no-use-extend-native**: Prevents extending built-in native objects
-- **eslint-plugin-n**: Rules for Node.js development (formerly `eslint-plugin-node`)
-- **eslint-plugin-compat**: Rules for ensuring compatibility with [Browserslist](https://github.com/browserslist/browserslist) configuration
-- **@next/eslint-plugin-next**: Rules specific to Next.js development
-- **@vitest/eslint-plugin**: Rules for Vitest testing framework
-- **eslint-plugin-testing-library**: Rules for Testing Library (DOM and React)
-- **eslint-config-prettier**: Turns off ESLint rules that conflict with Prettier
-
-## Key Features
-
-### Import Rules
-
-The package provides comprehensive import ordering and validation rules to ensure consistent imports with proper separation between different groups:
-
-```js
-// Example of sorted imports following the rules
-// Built-in modules
-import fs from 'node:fs';
-
-// External dependencies
-import React from 'react';
-import axios from 'axios';
-
-// Internal modules
-import Button from '@workspace/ui/button';
-
-// Parent/sibling/index imports
-import utils from '../utils';
-import Header from './header';
-import { constants } from '.';
-```
-
-### TypeScript Support
-
-The TypeScript configuration extends the base with:
-
-- Type-aware linting rules
-- Disabling of type-related rules for JavaScript files
-- Support for proper import resolution between JS and TS files
-
-### Testing Support
-
-Integrated support for:
-
-- Vitest testing framework
-- DOM Testing Library
-- React Testing Library
+- **eslint-plugin-no-secrets**: Prevents committing secrets to code
+- **eslint-plugin-no-unsanitized**: Prevents unsanitized DOM manipulation
+- **eslint-plugin-depend**: Dependency management rules
+- **eslint-plugin-sonarjs**: Detects bugs and suspicious patterns
+- **@eslint-community/eslint-plugin-eslint-comments**: Best practices for ESLint directive comments
+- **eslint-plugin-jsdoc**: JSDoc comment linting
+- **eslint-plugin-jsx-a11y**: Accessibility rules for JSX
+- **@next/eslint-plugin-next**: Next.js-specific rules
+- **eslint-plugin-testing-library**: Testing Library rules (DOM and React)
+- **@vitest/eslint-plugin**: Vitest testing framework rules
+- **eslint-plugin-playwright**: Playwright testing rules
+- **@graphql-eslint/eslint-plugin**: GraphQL schema and operation linting
+- **eslint-plugin-tailwindcss**: Tailwind CSS class linting
+- **eslint-config-prettier**: Disables rules that conflict with Prettier
 
 ## License
 

@@ -1,9 +1,13 @@
-import eslintPluginImport from 'eslint-plugin-import';
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
+import eslintPluginImportX, {
+  createNodeResolver,
+} from 'eslint-plugin-import-x';
 
 import {
   CONFIG_FILES,
   DEFAULT_EXTENSIONS,
   DEFAULT_FILES,
+  JS_EXTENSIONS,
   JS_FILES,
   TEST_FILES,
   TS_EXTENSIONS,
@@ -15,59 +19,64 @@ import {
 export const jsConfig = {
   files: [...JS_FILES],
   plugins: {
-    import: eslintPluginImport,
+    'import-x': eslintPluginImportX,
   },
   settings: {
-    'import/core-modules': ['electron'],
-    'import/internal-regex': '^@workspace/',
+    'import-x/core-modules': ['electron'],
+    'import-x/internal-regex': '^@workspace/',
+    'import-x/resolver-next': [
+      createNodeResolver({
+        extensions: [...JS_EXTENSIONS],
+      }),
+    ],
   },
   rules: {
-    'import/default': 'error',
-    'import/export': 'error',
-    'import/extensions': [
+    'import-x/default': 'error',
+    'import-x/export': 'error',
+    'import-x/extensions': [
       'error',
       'always',
       {
         ignorePackages: true,
       },
     ],
-    'import/first': 'error',
-    'import/named': 'error',
-    'import/namespace': [
+    'import-x/first': 'error',
+    'import-x/named': 'error',
+    'import-x/namespace': [
       'error',
       {
         allowComputed: true,
       },
     ],
-    'import/no-absolute-path': 'error',
-    'import/no-anonymous-default-export': 'error',
-    'import/no-commonjs': 'off', // Redundant with `unicorn/prefer-module`.
-    'import/no-deprecated': 'error',
-    'import/no-named-default': 'error',
-    'import/no-webpack-loader-syntax': 'error',
-    'import/no-self-import': 'error',
-    'import/no-cycle': [
+    'import-x/no-absolute-path': 'error',
+    'import-x/no-anonymous-default-export': 'error',
+    'import-x/no-commonjs': 'off', // Redundant with `unicorn/prefer-module`.
+    'import-x/no-deprecated': 'error',
+    'import-x/no-named-default': 'error',
+    'import-x/no-webpack-loader-syntax': 'error',
+    'import-x/no-self-import': 'error',
+    'import-x/no-cycle': [
       'error',
       {
         ignoreExternal: true,
       },
     ],
-    'import/no-useless-path-segments': 'error',
-    'import/newline-after-import': [
+    'import-x/no-useless-path-segments': 'error',
+    'import-x/newline-after-import': [
       'error',
       {
         considerComments: true,
       },
     ],
-    'import/no-amd': 'error',
-    'import/no-duplicates': [
+    'import-x/no-amd': 'error',
+    'import-x/no-duplicates': [
       'error',
       {
         'prefer-inline': true,
       },
     ],
-    'import/no-empty-named-blocks': 'error',
-    'import/no-extraneous-dependencies': [
+    'import-x/no-empty-named-blocks': 'error',
+    'import-x/no-extraneous-dependencies': [
       'error',
       {
         includeInternal: true,
@@ -77,16 +86,16 @@ export const jsConfig = {
         peerDependencies: false,
       },
     ],
-    'import/no-mutable-exports': 'error',
-    'import/no-named-as-default-member': 'error',
-    'import/no-named-as-default': 'error',
-    'import/no-unresolved': [
+    'import-x/no-mutable-exports': 'error',
+    'import-x/no-named-as-default-member': 'error',
+    'import-x/no-named-as-default': 'error',
+    'import-x/no-unresolved': [
       'error',
       {
         commonjs: false,
       },
     ],
-    'import/order': [
+    'import-x/order': [
       'error',
       {
         groups: [
@@ -112,7 +121,7 @@ export const jsConfig = {
         warnOnUnassignedImports: true,
       },
     ],
-    'import/no-unassigned-import': [
+    'import-x/no-unassigned-import': [
       'error',
       {
         allow: [
@@ -137,18 +146,18 @@ export const tsConfig = {
   files: [...DEFAULT_FILES],
   settings: {
     ...jsConfig.settings,
-    'import/extensions': [...DEFAULT_EXTENSIONS],
-    'import/external-module-folders': ['node_modules', 'node_modules/@types'],
-    'import/parsers': {
+    'import-x/extensions': [...DEFAULT_EXTENSIONS],
+    'import-x/external-module-folders': ['node_modules', 'node_modules/@types'],
+    'import-x/parsers': {
       '@typescript-eslint/parser': [...TS_EXTENSIONS],
     },
-    'import/resolver': {
-      node: {
+    'import-x/resolver-next': [
+      createNodeResolver({
         extensions: [...DEFAULT_EXTENSIONS],
-      },
-      typescript: {
+      }),
+      createTypeScriptImportResolver({
         alwaysTryTypes: true,
-      },
-    },
+      }),
+    ],
   },
 };

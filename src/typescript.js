@@ -4,6 +4,7 @@ import eslintConfigXoTypeScript from 'eslint-config-xo-typescript';
 import baseConfig, { rules } from './base.js';
 import { CONFIG_FILES, JS_FILES } from './constants.js';
 import { tsConfig as importConfig } from './plugins/import.js';
+import { tsConfig as jsdocConfig } from './plugins/jsdoc.js';
 
 /** @import { Linter } from 'eslint' */
 
@@ -36,12 +37,12 @@ const jsDisableTypeRules = {
 
 /**
  * A shared ESLint configuration for libraries that use TypeScript.
- *
  * @type {Linter.Config[]}
- * */
+ */
 const config = [
   ...baseConfig,
   importConfig,
+  jsdocConfig,
   ...eslintConfigXoTypeScript,
   {
     languageOptions: {

@@ -1,4 +1,4 @@
-import eslintPluginEslintComments from 'eslint-plugin-eslint-comments';
+import eslintPluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments';
 
 import { DEFAULT_FILES } from '../constants.js';
 
@@ -8,21 +8,21 @@ import { DEFAULT_FILES } from '../constants.js';
 const config = {
   files: [...DEFAULT_FILES],
   plugins: {
-    'eslint-comments': eslintPluginEslintComments,
+    '@eslint-community/eslint-comments': eslintPluginEslintComments,
   },
   rules: {
     ...eslintPluginEslintComments.configs.recommended.rules,
-    'eslint-comments/disable-enable-pair': [
+    '@eslint-community/eslint-comments/disable-enable-pair': [
       'error',
       {
         allowWholeFile: true,
       },
     ],
-    'eslint-comments/no-aggregating-enable': 'error',
-    'eslint-comments/no-duplicate-disable': 'error',
-    'eslint-comments/no-unlimited-disable': 'off', // We use `unicorn/no-abusive-eslint-disable` instead.
-    'eslint-comments/no-unused-disable': 'error',
-    'eslint-comments/no-unused-enable': 'error',
+    '@eslint-community/eslint-comments/no-aggregating-enable': 'error',
+    '@eslint-community/eslint-comments/no-duplicate-disable': 'error',
+    '@eslint-community/eslint-comments/no-unlimited-disable': 'off', // We use `unicorn/no-abusive-eslint-disable` instead.
+    '@eslint-community/eslint-comments/no-unused-disable': 'error',
+    '@eslint-community/eslint-comments/no-unused-enable': 'error',
   },
 };
 

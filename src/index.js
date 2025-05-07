@@ -8,9 +8,8 @@ import { jsConfig as importConfig } from './plugins/import.js';
 
 /**
  * A shared ESLint configuration.
- *
  * @type {Linter.Config[]}
- * */
+ */
 const config = [
   ...baseConfig,
   importConfig,

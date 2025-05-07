@@ -1,8 +1,12 @@
-import compatConfig from './plugins/compat.js';
+import dependConfig from './plugins/depend.js';
 import eslintCommentsConfig from './plugins/eslint-comments.js';
+import { jsConfig as jsdocConfig } from './plugins/jsdoc.js';
 import nConfig from './plugins/n.js';
+import noSecretsConfig from './plugins/no-secrets.js';
+import noUnsanitizedConfig from './plugins/no-unsanitized.js';
 import noUseExtendNativeConfig from './plugins/no-use-extend-native.js';
 import promiseConfig from './plugins/promise.js';
+import sonarjsConfig from './plugins/sonarjs.js';
 import unicornConfig from './plugins/unicorn.js';
 import vitestConfig from './plugins/vitest.js';
 
@@ -27,12 +31,16 @@ const config = [
       'pnpm-lock.yaml',
     ],
   },
+  dependConfig,
   eslintCommentsConfig,
+  jsdocConfig,
   nConfig,
+  noSecretsConfig,
+  noUnsanitizedConfig,
   noUseExtendNativeConfig,
   promiseConfig,
+  sonarjsConfig,
   unicornConfig,
-  compatConfig,
   vitestConfig,
 ];
 
