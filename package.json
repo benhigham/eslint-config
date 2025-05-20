@@ -25,7 +25,8 @@
     "./typescript": "./src/typescript.js",
     "./plugins/graphql": "./src/plugins/graphql.js",
     "./plugins/playwright": "./src/plugins/playwright.js",
-    "./plugins/tailwindcss": "./src/plugins/tailwindcss.js"
+    "./plugins/tailwindcss": "./src/plugins/tailwindcss.js",
+    "./plugins/turbo": "./src/plugins/turbo.js"
   },
   "sideEffects": false,
   "engines": {
@@ -94,6 +95,7 @@
     "eslint-plugin-sonarjs": "^3.0.2",
     "eslint-plugin-tailwindcss": "^3.18.0",
     "eslint-plugin-testing-library": "^7.2.1",
+    "eslint-plugin-turbo": "^2.5.3",
     "eslint-plugin-unicorn": "^59.0.1",
     "globals": "^16.1.0"
   },
