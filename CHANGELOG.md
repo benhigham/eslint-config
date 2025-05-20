@@ -1,5 +1,11 @@
 # @benhigham/eslint-config
 
+## 1.1.0
+
+### Minor Changes
+
+- [`6bc4821`](https://github.com/benhigham/eslint-config/commit/6bc48212298cb126b5fe7e43c6b3c168b1ca3d58) Thanks [@benhigham](https://github.com/benhigham)! - Add `eslint-plugin-turbo` to plugins
+
 ## 1.0.1
 
 ### Patch Changes
