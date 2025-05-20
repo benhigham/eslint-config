@@ -1,5 +1,11 @@
 # @benhigham/eslint-config
 
+## 1.0.1
+
+### Patch Changes
+
+- [`0f625f3`](https://github.com/benhigham/eslint-config/commit/0f625f30341802eb642449a0a435a092517cb3e7) Thanks [@benhigham](https://github.com/benhigham)! - Fix `eslint-plugin-import-x` rules
+
 ## 1.0.0
 
 ### Major Changes
