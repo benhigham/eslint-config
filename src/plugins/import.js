@@ -23,7 +23,7 @@ export const jsConfig = {
   },
   settings: {
     'import-x/core-modules': ['electron'],
-    'import-x/internal-regex': '^@workspace/',
+    'import-x/internal-regex': '^@repo/',
     'import-x/resolver-next': [
       createNodeResolver({
         extensions: [...JS_EXTENSIONS],
@@ -83,7 +83,7 @@ export const jsConfig = {
         includeTypes: true,
         devDependencies: [...CONFIG_FILES, ...TEST_FILES],
         optionalDependencies: false,
-        peerDependencies: false,
+        peerDependencies: true,
       },
     ],
     'import-x/no-mutable-exports': 'error',
@@ -105,14 +105,6 @@ export const jsConfig = {
           ['parent', 'sibling', 'index'],
           'object',
         ],
-        pathGroups: [
-          {
-            pattern: '@workspace/**',
-            group: 'internal',
-            position: 'before',
-          },
-        ],
-        pathGroupsExcludedImportTypes: [],
         alphabetize: {
           order: 'asc',
           caseInsensitive: true,
