@@ -1,29 +1,17 @@
-import eslintPluginTailwindcss from 'eslint-plugin-tailwindcss';
+import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss';
 
-import { DEFAULT_FILES } from '../constants.js';
+import { DEFAULT_FILES, TEMPLATE_FILES } from '../constants.js';
 
 /** @import { Linter } from 'eslint' */
 
 /** @type {Linter.Config} */
 const config = {
-  files: [...DEFAULT_FILES, '**/*.{html,vue}'],
+  files: [...DEFAULT_FILES, ...TEMPLATE_FILES],
   plugins: {
-    tailwindcss: eslintPluginTailwindcss,
-  },
-  settings: {
-    tailwindcss: {
-      callees: ['classnames', 'clsx', 'cn', 'ctl'],
-    },
+    'better-tailwindcss': eslintPluginBetterTailwindcss,
   },
   rules: {
-    'tailwindcss/classnames-order': 'warn',
-    'tailwindcss/enforces-negative-arbitrary-values': 'warn',
-    'tailwindcss/enforces-shorthand': 'warn',
-    'tailwindcss/migration-from-tailwind-2': 'warn',
-    'tailwindcss/no-arbitrary-value': 'off',
-    'tailwindcss/no-custom-classname': 'warn',
-    'tailwindcss/no-contradicting-classname': 'error',
-    'tailwindcss/no-unnecessary-arbitrary-value': 'warn',
+    ...eslintPluginBetterTailwindcss.configs.recommended.rules,
   },
 };
 
