@@ -111,5 +111,10 @@
   },
   "peerDependencies": {
     "eslint": ">=9.26.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "minimatch": "^9.0.7"
+    }
   }
 }
