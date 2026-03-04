@@ -2,8 +2,9 @@ import eslintPluginTurbo from 'eslint-plugin-turbo';
 
 /** @import { Linter } from 'eslint' */
 
+// No `files` property — consumers are expected to scope this to their project.
 /** @type {Linter.Config} */
-export const config = {
+const config = {
   plugins: {
     turbo: eslintPluginTurbo,
   },

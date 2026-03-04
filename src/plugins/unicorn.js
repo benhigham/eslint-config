@@ -12,8 +12,8 @@ const config = {
   },
   rules: {
     ...eslintPluginUnicorn.configs.recommended.rules,
-    'unicorn/no-null': 'off',
-    'unicorn/prevent-abbreviations': 'off',
+    'unicorn/no-null': 'off', // null is required by DOM APIs, JSON, and many libraries.
+    'unicorn/prevent-abbreviations': 'off', // Overly aggressive; common abbreviations (e.g. props, params) are clear.
   },
 };
 

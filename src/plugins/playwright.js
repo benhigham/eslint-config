@@ -2,8 +2,9 @@ import eslintPluginPlaywright from 'eslint-plugin-playwright';
 
 /** @import { Linter } from 'eslint' */
 
+// No `files` property — consumers are expected to scope this to their test files.
 /** @type {Linter.Config} */
-export const config = {
+const config = {
   plugins: {
     playwright: eslintPluginPlaywright,
   },

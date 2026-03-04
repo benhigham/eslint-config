@@ -20,11 +20,11 @@ const config = {
     ],
     'promise/param-names': 'error',
     'promise/catch-or-return': 'error',
-    'promise/no-native': 'off',
+    'promise/no-native': 'off', // Native promises are standard and expected.
     'promise/no-nesting': 'warn',
     'promise/no-promise-in-callback': 'warn',
     'promise/no-callback-in-promise': 'warn',
-    'promise/avoid-new': 'off',
+    'promise/avoid-new': 'off', // Creating new promises is often necessary for wrapping callbacks.
     'promise/no-new-statics': 'error',
     'promise/no-return-in-finally': 'error',
     'promise/valid-params': 'error',
