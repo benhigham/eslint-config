@@ -21,9 +21,9 @@ const config = {
     },
   },
   rules: {
-    // Start with recommended, then layer on all remaining rules.
-    ...eslintPluginVitest.configs.recommended.rules,
+    // Enable all rules, but prefer recommended severities where they differ.
     ...eslintPluginVitest.configs.all.rules,
+    ...eslintPluginVitest.configs.recommended.rules,
   },
 };
 

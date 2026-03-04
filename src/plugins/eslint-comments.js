@@ -19,6 +19,7 @@ const config = {
       },
     ],
     '@eslint-community/eslint-comments/no-unlimited-disable': 'off', // We use `unicorn/no-abusive-eslint-disable` instead.
+    '@eslint-community/eslint-comments/no-unused-disable': 'error',
   },
 };
 
