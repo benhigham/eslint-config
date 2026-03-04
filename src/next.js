@@ -1,5 +1,4 @@
-import eslintPluginNext from '@next/eslint-plugin-next';
-
+import nextConfig from './plugins/next.js';
 import reactConfig from './react.js';
 
 /** @import { Linter } from 'eslint' */
@@ -13,15 +12,7 @@ const config = [
     ignores: ['.next', '.vercel'],
   },
   ...reactConfig,
-  {
-    plugins: {
-      '@next/next': eslintPluginNext,
-    },
-    rules: {
-      ...eslintPluginNext.configs.recommended.rules,
-      ...eslintPluginNext.configs['core-web-vitals'].rules,
-    },
-  },
+  nextConfig,
 ];
 
 export default config;
