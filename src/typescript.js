@@ -58,6 +58,7 @@ const config = [
     files: [...JS_FILES],
     rules: jsDisableTypeRules,
   },
+  // Always apply prettier last to disable conflicting formatting rules.
   eslintConfigPrettier,
 ];
 

@@ -15,6 +15,7 @@ const config = [
   importConfig,
   ...eslintConfigXo,
   { rules },
+  // Always apply prettier last to disable conflicting formatting rules.
   eslintConfigPrettier,
 ];
 
