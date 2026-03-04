@@ -7,13 +7,7 @@ import { DEFAULT_FILES } from '../constants.js';
 /** @type {Linter.Config} */
 const config = {
   files: [...DEFAULT_FILES],
-  plugins: {
-    'no-unsanitized': eslintPluginNoUnsanitized,
-  },
-  rules: {
-    'no-unsanitized/property': 'error',
-    'no-unsanitized/method': 'error',
-  },
+  ...eslintPluginNoUnsanitized.configs.recommended,
 };
 
 export default config;

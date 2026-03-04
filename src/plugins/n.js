@@ -11,6 +11,8 @@ const config = {
     n: eslintPluginN,
   },
   rules: {
+    ...eslintPluginN.configs['flat/recommended'].rules,
+
     // Redundant with `import/no-extraneous-dependencies`.
     'n/no-extraneous-import': 'off',
     'n/no-extraneous-require': 'off',
@@ -19,33 +21,13 @@ const config = {
     'n/no-missing-import': 'off',
     'n/no-missing-require': 'off',
 
-    'n/no-unpublished-bin': 'error',
-    // We have this enabled in addition to `import/extensions` as this one has an auto-fix.
-    'n/file-extension-in-import': ['error', 'always'],
-    'n/no-mixed-requires': [
-      'error',
-      {
-        grouping: true,
-        allowCall: true,
-      },
-    ],
+    'n/no-unpublished-import': ['error', { allowModules: ['electron'] }],
+    'n/no-unpublished-require': ['error', { allowModules: ['electron'] }],
+    'n/no-mixed-requires': ['error', { grouping: true, allowCall: true }],
     'n/no-new-require': 'error',
     'n/no-path-concat': 'error',
-    'n/no-unpublished-import': [
-      'error',
-      {
-        allowModules: ['electron'],
-      },
-    ],
-    'n/no-unpublished-require': [
-      'error',
-      {
-        allowModules: ['electron'],
-      },
-    ],
-    'n/process-exit-as-throw': 'error',
-    'n/hashbang': 'error',
-    'n/no-deprecated-api': 'error',
+    // We have this enabled in addition to `import/extensions` as this one has an auto-fix.
+    'n/file-extension-in-import': ['error', 'always'],
     'n/prefer-global/buffer': ['error', 'never'],
     'n/prefer-global/console': ['error', 'always'],
     'n/prefer-global/process': ['error', 'never'],
