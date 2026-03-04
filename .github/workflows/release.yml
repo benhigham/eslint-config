@@ -23,7 +23,8 @@ jobs:
       id-token: write # for npm provenance verification (changesets/action)
       issues: write # to post issue comments (changesets/action)
       pull-requests: write # to create the pull request (changesets/action)
-    uses: benhigham/.github/.github/workflows/release-changesets.yml@main
+    # Pinned from benhigham/.github main branch, 2026-03-04
+    uses: benhigham/.github/.github/workflows/release-changesets.yml@7a1eb9105ae462853ee01a41ad45518b4bae51c9
     with:
       node-version: 22
     secrets:
