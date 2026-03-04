@@ -1,12 +1,12 @@
 import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss';
 
-import { DEFAULT_FILES, TEMPLATE_FILES } from '../constants.js';
+import { DEFAULT_FILES } from '../constants.js';
 
 /** @import { Linter } from 'eslint' */
 
 /** @type {Linter.Config} */
 const config = {
-  files: [...DEFAULT_FILES, ...TEMPLATE_FILES],
+  files: [...DEFAULT_FILES, '**/*.{html,vue}'],
   plugins: {
     'better-tailwindcss': eslintPluginBetterTailwindcss,
   },

@@ -13,11 +13,11 @@ const config = {
   rules: {
     ...eslintPluginN.configs['flat/recommended'].rules,
 
-    // Redundant with `import/no-extraneous-dependencies`.
+    // Redundant with `import-x/no-extraneous-dependencies`.
     'n/no-extraneous-import': 'off',
     'n/no-extraneous-require': 'off',
 
-    // Redundant with `import/no-unresolved`.
+    // Redundant with `import-x/no-unresolved`.
     'n/no-missing-import': 'off',
     'n/no-missing-require': 'off',
 
@@ -26,7 +26,7 @@ const config = {
     'n/no-mixed-requires': ['error', { grouping: true, allowCall: true }],
     'n/no-new-require': 'error',
     'n/no-path-concat': 'error',
-    // We have this enabled in addition to `import/extensions` as this one has an auto-fix.
+    // Supplements `import-x/extensions` — both enforce file extensions, but keeping both ensures coverage regardless of resolver configuration.
     'n/file-extension-in-import': ['error', 'always'],
     'n/prefer-global/buffer': ['error', 'never'],
     'n/prefer-global/console': ['error', 'always'],

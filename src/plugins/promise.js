@@ -13,8 +13,8 @@ const config = {
   rules: {
     ...eslintPluginPromise.configs['flat/recommended'].rules,
     'promise/no-return-wrap': ['error', { allowReject: true }],
-    'promise/no-return-in-finally': 'error',
-    'promise/valid-params': 'error',
+    'promise/no-return-in-finally': 'error', // Elevated from recommended 'warn' to 'error'.
+    'promise/valid-params': 'error', // Elevated from recommended 'warn' to 'error'.
     'promise/prefer-await-to-then': 'error',
   },
 };
