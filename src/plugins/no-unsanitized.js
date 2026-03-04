@@ -4,16 +4,13 @@ import { DEFAULT_FILES } from '../constants.js';
 
 /** @import { Linter } from 'eslint' */
 
+const { plugins, rules } = eslintPluginNoUnsanitized.configs.recommended;
+
 /** @type {Linter.Config} */
 const config = {
   files: [...DEFAULT_FILES],
-  plugins: {
-    'no-unsanitized': eslintPluginNoUnsanitized,
-  },
-  rules: {
-    'no-unsanitized/property': 'error',
-    'no-unsanitized/method': 'error',
-  },
+  plugins,
+  rules,
 };
 
 export default config;

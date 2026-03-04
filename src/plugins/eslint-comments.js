@@ -18,11 +18,8 @@ const config = {
         allowWholeFile: true,
       },
     ],
-    '@eslint-community/eslint-comments/no-aggregating-enable': 'error',
-    '@eslint-community/eslint-comments/no-duplicate-disable': 'error',
     '@eslint-community/eslint-comments/no-unlimited-disable': 'off', // We use `unicorn/no-abusive-eslint-disable` instead.
-    '@eslint-community/eslint-comments/no-unused-disable': 'error',
-    '@eslint-community/eslint-comments/no-unused-enable': 'error',
+    '@eslint-community/eslint-comments/no-unused-disable': 'error', // Not in recommended — catches stale disable directives.
   },
 };
 

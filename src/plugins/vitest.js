@@ -21,6 +21,7 @@ const config = {
     },
   },
   rules: {
+    // Enable all rules, but prefer recommended severities where they differ.
     ...eslintPluginVitest.configs.all.rules,
     ...eslintPluginVitest.configs.recommended.rules,
   },

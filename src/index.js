@@ -15,6 +15,7 @@ const config = [
   importConfig,
   ...eslintConfigXo,
   { rules },
+  // Apply prettier last in this config to disable formatting rules from preceding presets.
   eslintConfigPrettier,
 ];
 

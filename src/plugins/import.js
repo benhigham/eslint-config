@@ -10,7 +10,6 @@ import {
   JS_EXTENSIONS,
   JS_FILES,
   TEST_FILES,
-  TS_EXTENSIONS,
 } from '../constants.js';
 
 /** @import { Linter } from 'eslint' */
@@ -140,9 +139,6 @@ export const tsConfig = {
     ...jsConfig.settings,
     'import-x/extensions': [...DEFAULT_EXTENSIONS],
     'import-x/external-module-folders': ['node_modules', 'node_modules/@types'],
-    'import-x/parsers': {
-      '@typescript-eslint/parser': [...TS_EXTENSIONS],
-    },
     'import-x/resolver-next': [
       createNodeResolver({
         extensions: [...DEFAULT_EXTENSIONS],
