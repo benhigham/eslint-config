@@ -21,8 +21,9 @@ const config = {
     },
   },
   rules: {
-    ...eslintPluginVitest.configs.all.rules,
+    // Start with recommended, then layer on all remaining rules.
     ...eslintPluginVitest.configs.recommended.rules,
+    ...eslintPluginVitest.configs.all.rules,
   },
 };
 
