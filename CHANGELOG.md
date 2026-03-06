@@ -1,5 +1,28 @@
 # @benhigham/eslint-config
 
+## 2.0.0
+
+### Major Changes
+
+- [#102](https://github.com/benhigham/eslint-config/pull/102) [`d404d5a`](https://github.com/benhigham/eslint-config/commit/d404d5aa5126279f1c7e04f72dd26fb6218365a1) Thanks [@benhigham](https://github.com/benhigham)! - - Replace `eslint-plugin-tailwindcss` with `eslint-plugin-better-tailwindcss` for Tailwind CSS v4 support (rule prefix changes from `tailwindcss/` to `better-tailwindcss/`)
+  - Drop Node.js 18 support (minimum is now 20.19.0)
+  - Remove named `config` export from `playwright` and `turbo` plugin entry points (use default import instead)
+
+### Minor Changes
+
+- [#102](https://github.com/benhigham/eslint-config/pull/102) [`d404d5a`](https://github.com/benhigham/eslint-config/commit/d404d5aa5126279f1c7e04f72dd26fb6218365a1) Thanks [@benhigham](https://github.com/benhigham)! - - Use recommended presets for `promise`, `n`, and `no-unsanitized` plugins
+  - Update browser globals from ES2022 to ES2025
+  - Remove deprecated `import-x/parsers` setting
+  - Inline `confusing-browser-globals` list, remove abandoned dependency
+  - Clean up redundant rule re-assertions, export inconsistencies, and dead code
+  - Bump `eslint-config-xo` from v0.47 to v0.49
+  - Bump `eslint-config-xo-typescript` from v8 to v9
+  - Bump `eslint-plugin-unicorn` from v59 to v60
+  - Bump `eslint-plugin-jsdoc` from v50 to v61 (adds new recommended rules)
+  - Bump `@next/eslint-plugin-next` from v15 to v16 (flat config is now the default)
+  - Bump `@vitest/eslint-plugin` from v1.2 to v1.3
+  - Bump `eslint-plugin-import-x`, `eslint-plugin-n`, `eslint-plugin-sonarjs`, `eslint-plugin-testing-library`, `eslint-plugin-no-unsanitized`, and other plugin dependencies
+
 ## 1.1.0
 
 ### Minor Changes
