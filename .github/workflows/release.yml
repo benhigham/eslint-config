@@ -27,5 +27,3 @@ jobs:
     uses: benhigham/.github/.github/workflows/release-changesets.yml@7a1eb9105ae462853ee01a41ad45518b4bae51c9
     with:
       node-version: 22
-    secrets:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
