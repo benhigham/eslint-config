@@ -77,7 +77,7 @@ export const baseConfig = [
   {
     languageOptions: {
       globals: {
-        ...globals.es2025,
+        ...globals.es2026,
         ...globals.browser,
       },
     },
