@@ -11,4 +11,4 @@ jobs:
   auto-merge:
     if: github.actor == 'dependabot[bot]'
     # Pinned from benhigham/.github main branch, 2026-03-04
-    uses: benhigham/.github/.github/workflows/auto-merge-dependabot.yml@7a1eb9105ae462853ee01a41ad45518b4bae51c9
+    uses: benhigham/.github/.github/workflows/auto-merge-dependabot.yml@62c1f964ae0240e9610912c9ee9f427f3a5383aa
