@@ -9,5 +9,5 @@
 - Bump `eslint-config-xo-react` from v0.28 to v0.29
   - Adds missing React Hooks rules
 - Bump `eslint-plugin-jsdoc` from v61 to v62
-  - Requires Node ≥20.19.0 (already satisfied — Node 18 was dropped in this release)
+  - Requires Node ≥20.19.0 (already satisfied — minimum is now ≥22)
   - Adds `skipInvokedExpressionsForCommentFinding` setting
