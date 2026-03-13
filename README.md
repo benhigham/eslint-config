@@ -21,6 +21,11 @@ A shareable ESLint configuration package with opinionated rules for JavaScript a
 - **Prettier Compatibility**: Disables conflicting rules for seamless Prettier integration
 - **Documentation Linting**: Enforces standards for JSDoc and ESLint directive comments
 
+## Prerequisites
+
+- **Node.js** ≥ 22
+- **ESLint** ≥ 9
+
 ## Installation
 
 ```bash
